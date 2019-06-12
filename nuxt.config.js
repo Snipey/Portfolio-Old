@@ -53,4 +53,13 @@ export default {
     extend(config, ctx) {
     }
   }
+  /**
+* Gitlab
+*/
+router: {
+   base: '/whatEverName/',  
+},
+generate: {
+   dir: 'public',
+},
 }
