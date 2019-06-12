@@ -5,7 +5,7 @@ export default {
 * Gitlab
 */
 router: {
-   base: '/whatEverName/',  
+   base: '/Portfolio/',  
 },
 generate: {
    dir: 'public',
