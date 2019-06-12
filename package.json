@@ -10,7 +10,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "@nuxtjs/bulma": "^1.2.1",
