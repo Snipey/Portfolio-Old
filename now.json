@@ -1,12 +1,23 @@
+{
   "version": 2,
   "builds": [
     {
-      "src": "nuxt.config.js",
-      "use": "@now/node@latest",
-      "config": {}
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "public" }
     }
   ],
+  "alias": ["snipey.me"],
   "routes": [
-    { "src": "/_nuxt/.+", "headers": { "Cache-Control": "max-age=31557600" } },
-    { "src": "/(.*)", "dest": "/" }
+    {
+      "src": "/_nuxt/.+",
+      "headers": {
+        "Cache-Control": "max-age=31557600"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
   ]
+}
