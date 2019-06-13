@@ -5,7 +5,7 @@ export default {
 * Gitlab
 */
 router: {
-   base: '/',  
+   base: '/',
 },
 generate: {
    dir: 'public',
@@ -18,10 +18,14 @@ generate: {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: 'The portfolio for (Snipey) Stephen F' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Ubuntu|Press+Start+2P&display=swap'}
+    ],
+    script: [
+      { src: 'https://use.fontawesome.com/c90a54fd5c.js' }
     ]
   },
   /*
@@ -44,6 +48,8 @@ generate: {
   modules: [
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
+    '@nuxtjs/font-awesome',
+    '@nuxtjs/svg-sprite',
   ],
   /*
   ** Build configuration

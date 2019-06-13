@@ -1,14 +1,12 @@
 <template>
   <div class="mainContainer">
-    <Navbar />
     <nuxt />
-    <Footer />
+    <div class="bg"></div>
   </div>
 </template>
-
 <style>
+
 .mainContainer {
-  background-image: linear-gradient(#bf68c4, #a751c4);
   height: 100%;
   min-height: 100% !important;
   bottom: 0;
@@ -16,14 +14,18 @@
   position: absolute;
   width: 100%;
 }
-</style>
-<script>
-  import Navbar from '~/components/Navbar.vue'
-  import Footer from '~/components/Footer.vue'
-  export default {
-    components: {
-      Navbar,
-      Footer
-    }
+  .bg {
+    background-image: url("/bg.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    height: 100%;
+    width: 100%;
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
   }
-</script>
+</style>

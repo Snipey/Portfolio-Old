@@ -1,164 +1,127 @@
 <template>
-    <div class="container is-fluid">
-        <!-- BEGIN HERO!!!!!!-->
-        <div>
-            <section class="hero is-medium">
-                <div class="hero-body">
-                    <div class="container">
-                        <h1 class="title">
-                            <span class="pre">Stephen</span><span class="F">F</span><span class="end">.dev</span>
-                        </h1>
-                        <h2 class="subtitle logo">
-                            Getting things done!
-                        </h2>
-                    </div>
-                </div>
-            </section>
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <div class="logo">< Snipey /></div>
+                <div class="sub-logo">Full Stack Developer</div>
+            </div>
         </div>
-        <!-- END HERO!!!!!!-->
-        <div>
+        <div class="box gradient-border">
             <div class="columns">
-                <div class="column">
-                    <div class="card">
-                        <div class="card-content">
-                            <p class="title">
-                                Sporkbot
-                            </p>
-                            <p class="subtitle">
-                                Me
-                            </p>
-                            <hr/>
-                            <p class="subtitle">
-                                A multi-function bot to add user interaction in the discord server
-                            </p>
+                <div class="column is-four-fifths port-text">
+                    <p>
+                        My name is Stephen and I am a developer of sorts. I have made a few projects and currently am just working on hobby projects for me to learn a few new web technologies.
+                    </p>
+                    <hr/>
+                    <p>
+                        Skills:<br>
+                        > Backend
+                            <progress class="progress" value="60" max="100">Backend</progress>
+                        > Javascript
+                            <progress class="progress is-warning" value="50" max="100">Javascript</progress>
+                        > PHP
+                            <progress class="progress is-success" value="65" max="100">PHP</progress>
+                        > GIT
+                            <progress class="progress is-success" value="75" max="100">GIT</progress>
+                    </p>
+                    <br>
+                    <div class="columns">
+                        <div class="column">
+                            <a class="button is-fullwidth" onclick="projectModal()">Projects</a>
                         </div>
-                        <footer class="card-footer">
-                            <p class="card-footer-item">
-                              <span>
-                                View on <a href="https://gitlab.com/thesporkening/sporkbot">Git Lab</a>
-                              </span>
-                            </p>
-                        </footer>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="card">
-                        <div class="card-content">
-                            <p class="title">
-                                SporkNET
-                            </p>
-                            <p class="subtitle">
-                                Me
-                            </p><hr/>
-                            <p class="subtitle">
-                                The Frontend to The Sporkening home page
-                            </p>
+                <div class="column social">
+                    <Socials/>
+                    <div class="modal" id="projectModal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head">
+                                <p class="modal-card-title">Modal title</p>
+                                <button class="delete" aria-label="close"></button>
+                            </header>
+                            <section class="modal-card-body">
+                                <!-- Content ... -->
+                            </section>
+                            <footer class="modal-card-foot">
+                                <button class="button is-success">Save changes</button>
+                                <button class="button">Cancel</button>
+                            </footer>
                         </div>
-                        <footer class="card-footer">
-                            <p class="card-footer-item">
-                              <span>
-                                View on <a href="https://gitlab.com/thesporkening/frontend">Git Lab</a>
-                              </span>
-                            </p>
-                        </footer>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card">
-                        <div class="card-content">
-                            <p class="title">
-                                Portfolio
-                            </p>
-                            <p class="subtitle">
-                                Me
-                            </p>
-                            <hr/>
-                            <p class="subtitle">
-                                This portfolio that you are on now.
-                            </p>
-                        </div>
-                        <footer class="card-footer">
-                            <p class="card-footer-item">
-                              <span>
-                                View on <a href="https://gitlab.com/snipey/portfolio">Git Lab</a>
-                              </span>
-                            </p>
-                        </footer>
                     </div>
                 </div>
             </div>
-            <!-- Filler -->
-
         </div>
     </div>
-
 </template>
 
 <script>
+    import Socials from '~/components/Socials.vue'
+
+    export default {
+        components: {
+            Socials
+        }
+    }
+    function projectModal() {
+        let projects = document.getElementById("projectModal");
+        projects.classList.add("is-active");
+    }
 </script>
-
 <style>
-    .container {
-        padding-bottom: 30px;
-        padding-left: 150px;
-        padding-right: 150px;
+    .port-text {
+        color: #fdfbff;
+        font-family: 'Press Start 2P', cursive;
     }
-
-    .hero {
-        opacity: 10%;
-        border-radius: 50px
-    }
-
-    .title {
-        font-weight: bolder;
-    }
-
-    .pre {
-        font-family: 'Cantarell', sans-serif;
-        color: #ffffff;
-        text-shadow:
-                3px 3px 0 #000,
-                -1px -1px 0 #000,
-                1px -1px 0 #000,
-                -1px 1px 0 #000,
-                1px 1px 0 #000;
-    }
-
-    .end {
-        font-family: 'Cantarell', sans-serif;
-        color: #ffffff;
-        text-shadow:
-                3px 3px 0 #000,
-                -1px -1px 0 #000,
-                1px -1px 0 #000,
-                -1px 1px 0 #000,
-                1px 1px 0 #000;
-    }
-
-    .projects {
-        margin-bottom: 200px;
-    }
-    .F {
-        font-family: 'Cantarell', sans-serif;
-        color: #7a00eb;
-        text-shadow:
-                3px 3px 0 #000,
-                -1px -1px 0 #000,
-                1px -1px 0 #000,
-                -1px 1px 0 #000,
-                1px 1px 0 #000;
+    .social {
+        position: relative;
     }
     .logo {
-        color: #c1c1c1;
-        text-shadow:
-                3px 3px 0 #000,
-                -1px -1px 0 #000,
-                1px -1px 0 #000,
-                -1px 1px 0 #000,
-                1px 1px 0 #000;
+        font-size: 46pt;
+        text-align: center;
+        color: white;
     }
-    .card {
-        border-radius: 15px;
-        box-shadow: #000000;
+    .sub-logo {
+        text-align: center;
+        color: white;
+    }
+    .container {
+        margin-top: 15vh;
+        width: 50vw;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .gradient-border {
+        --borderWidth: 3px;
+        background: #000000;
+        position: relative;
+        border-radius: var(--borderWidth);
+    }
+
+    .gradient-border:after {
+        content: '';
+        position: absolute;
+        top: calc(-1 * var(--borderWidth));
+        left: calc(-1 * var(--borderWidth));
+        height: calc(100% + var(--borderWidth) * 2);
+        width: calc(100% + var(--borderWidth) * 2);
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+        border-radius: calc(2 * var(--borderWidth));
+        z-index: -1;
+        animation: animatedgradient 3s ease alternate infinite;
+        background-size: 300% 300%;
+    }
+
+
+    @keyframes animatedgradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
     }
 </style>
