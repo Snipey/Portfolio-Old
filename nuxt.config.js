@@ -5,7 +5,7 @@ export default {
 * Gitlab
 */
 router: {
-   base: '',  
+   base: '',
 },
 generate: {
    dir: 'public',
@@ -14,24 +14,26 @@ generate: {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Portfolio | Snipey.dev',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'The portfolio for (Snipey) Stephen F' }
+      { hid: 'description', name: 'description', content: 'A humble software developer portfolio' },
+      { hid: 'keywords', name: 'keywords', content: 'vuejs, nuxt, javascript, hire, development, software, projects, open source, php, full stack' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Ubuntu|Press+Start+2P&display=swap'}
+      /*{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },*/
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto+Mono|Press+Start+2P&display=swap'}
     ],
     script: [
-      { src: 'https://use.fontawesome.com/c90a54fd5c.js' }
+      { src: 'https://use.fontawesome.com/c90a54fd5c.js' },
+      { src: 'https://code.jquery.com/jquery-3.4.1.min.js', integrity: 'sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=', crossorigin: 'anonymous'}
     ]
   },
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#b600ff' },
   /*
   ** Global CSS
   */

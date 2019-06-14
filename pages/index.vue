@@ -1,5 +1,12 @@
 <template>
     <div class="container">
+        <div class="modal" id="projectsModal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus corporis impedit ipsa minima neque officiis provident reiciendis suscipit veritatis vero! Amet asperiores, atque aut consequuntur debitis ducimus eius eos fugiat in iure maxime modi non officia praesentium quam quas similique voluptatibus! Aut cumque delectus eos excepturi id nemo non nulla recusandae sequi ut? A consequatur dolore ea eligendi et labore modi numquam porro suscipit totam. Ab, architecto consectetur cumque dolorem ea explicabo, fugiat illum ipsam modi nam nobis quidem rem rerum sint temporibus. Architecto blanditiis cum doloremque eaque inventore laborum, nostrum, omnis possimus quidem quisquam rem tenetur, veritatis vero? Corporis?</p>
+            </div>
+            <button class="modal-close is-large" aria-label="close"></button>
+        </div>
         <div class="columns">
             <div class="column">
                 <div class="logo">< Snipey /></div>
@@ -12,43 +19,27 @@
                     <p>
                         My name is Stephen and I am a developer of sorts. I have made a few projects and currently am just working on hobby projects for me to learn a few new web technologies.
                     </p>
-                    <hr/>
+<!--                    <hr/>
                     <p>
                         Skills:<br>
-                        > Backend
-                            <progress class="progress" value="60" max="100">Backend</progress>
+                        > Databases
+                            <progress class="progress is-success" value="60" max="100">Backend</progress>
                         > Javascript
                             <progress class="progress is-warning" value="50" max="100">Javascript</progress>
                         > PHP
                             <progress class="progress is-success" value="65" max="100">PHP</progress>
                         > GIT
                             <progress class="progress is-success" value="75" max="100">GIT</progress>
-                    </p>
+                    </p>-->
                     <br>
                     <div class="columns">
                         <div class="column">
-                            <a class="button is-fullwidth" onclick="projectModal()">Projects</a>
+                            <a href="https://gitlab.com/users/Snipey/projects" class="button is-fullwidth port-text-inv modal-button" data-target="#projectsModal" onclick="projectModal()">Projects</a>
                         </div>
                     </div>
                 </div>
                 <div class="column social">
                     <Socials/>
-                    <div class="modal" id="projectModal">
-                        <div class="modal-background"></div>
-                        <div class="modal-card">
-                            <header class="modal-card-head">
-                                <p class="modal-card-title">Modal title</p>
-                                <button class="delete" aria-label="close"></button>
-                            </header>
-                            <section class="modal-card-body">
-                                <!-- Content ... -->
-                            </section>
-                            <footer class="modal-card-foot">
-                                <button class="button is-success">Save changes</button>
-                                <button class="button">Cancel</button>
-                            </footer>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -63,9 +54,19 @@
             Socials
         }
     }
+
     function projectModal() {
-        let projects = document.getElementById("projectModal");
-        projects.classList.add("is-active");
+        document.querySelectorAll('.modal-button').forEach(function(el) {
+            el.addEventListener('click', function() {
+                let target = document.querySelector(el.getAttribute('data-target'));
+
+                target.classList.add('is-active');
+
+                target.querySelector('.modal-close').addEventListener('click',   function() {
+                    target.classList.remove('is-active');
+                });
+            });
+        });
     }
 </script>
 <style>
@@ -78,8 +79,10 @@
     }
     .logo {
         font-size: 46pt;
+        font-weight: bold;
         text-align: center;
         color: white;
+        font-family: 'Roboto Mono', monospace;
     }
     .sub-logo {
         text-align: center;
@@ -92,7 +95,7 @@
     }
 
     .gradient-border {
-        --borderWidth: 3px;
+        --borderWidth: 6px;
         background: #000000;
         position: relative;
         border-radius: var(--borderWidth);
