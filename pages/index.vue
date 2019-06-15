@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="box gradient-border">
-            <div class="columns">
+            <div class="columns is-centered">
                 <div class="column is-four-fifths port-text">
                     <p>
                         My name is Stephen and I am a developer of sorts. I have made a few projects and currently am just working on hobby projects for me to learn a few new web technologies.
@@ -70,6 +70,12 @@
     }
 </script>
 <style>
+    ::selection {
+        background: #FBC93F; /* WebKit/Blink Browsers */
+    }
+    ::-moz-selection {
+        background: #FBC93F; /* Gecko Browsers */
+    }
     .port-text {
         color: #fdfbff;
         font-family: 'Press Start 2P', cursive;
@@ -79,24 +85,29 @@
     }
     .logo {
         font-size: 46pt;
-        font-weight: bold;
+        font-weight: bolder;
         text-align: center;
-        color: white;
-        font-family: 'Roboto Mono', monospace;
+        color: #067CFA;
+        -webkit-text-stroke: 1px #FBC93F;
+        text-shadow: 0px 4px 4px #282828;
+
     }
     .sub-logo {
+        font-size: 24pt;
         text-align: center;
-        color: white;
+        color: #067CFA;
+        -webkit-text-stroke: 1px #FBC93F;
+        text-shadow: 0px 4px 4px #282828;
     }
     .container {
-        margin-top: 15vh;
+        margin-top: 25vh;
         width: 50vw;
         font-family: 'Ubuntu', sans-serif;
     }
 
     .gradient-border {
         --borderWidth: 6px;
-        background: #000000;
+        background: #20113A;
         position: relative;
         border-radius: var(--borderWidth);
     }
@@ -108,7 +119,8 @@
         left: calc(-1 * var(--borderWidth));
         height: calc(100% + var(--borderWidth) * 2);
         width: calc(100% + var(--borderWidth) * 2);
-        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab,
+        #5073b8, #1098ad, #07b39b, #6fba82);
         border-radius: calc(2 * var(--borderWidth));
         z-index: -1;
         animation: animatedgradient 3s ease alternate infinite;

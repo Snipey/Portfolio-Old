@@ -20,4 +20,7 @@
     .social {
         color: #fdfbff;
     }
+    a:hover {
+        color: #DA4096;
+    }
 </style>
