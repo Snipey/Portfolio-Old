@@ -15,7 +15,9 @@
   width: 100%;
 }
   .bg {
-    background-image: url("http://getwallpapers.com/wallpaper/full/a/a/9/924984-amazing-neon-purple-backgrounds-3840x2160-full-hd.jpg");
+    background-color: #0d070f;
+    background-position: center;
+    background-size: cover;
     position: absolute;
     top: 0;
     left: 0;

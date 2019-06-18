@@ -22,12 +22,16 @@ generate: {
       { hid: 'keywords', name: 'keywords', content: 'vuejs, nuxt, javascript, hire, development, software, projects, open source, php, full stack' }
     ],
     link: [
-      /*{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },*/
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto+Mono|Press+Start+2P&display=swap'}
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto+Mono|Press+Start+2P&display=swap'},
+      {
+        rel: 'stylesheet',
+        href: 'https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css',
+        integrity: 'sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw',
+        crossorigin: 'anonymous'
+      }
     ],
     script: [
-      { src: 'https://use.fontawesome.com/c90a54fd5c.js' },
-      { src: 'https://code.jquery.com/jquery-3.4.1.min.js', integrity: 'sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=', crossorigin: 'anonymous'}
     ]
   },
   /*

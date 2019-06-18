@@ -1,44 +1,41 @@
 <template>
     <div class="container">
-        <div class="modal" id="projectsModal">
-            <div class="modal-background"></div>
-            <div class="modal-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus corporis impedit ipsa minima neque officiis provident reiciendis suscipit veritatis vero! Amet asperiores, atque aut consequuntur debitis ducimus eius eos fugiat in iure maxime modi non officia praesentium quam quas similique voluptatibus! Aut cumque delectus eos excepturi id nemo non nulla recusandae sequi ut? A consequatur dolore ea eligendi et labore modi numquam porro suscipit totam. Ab, architecto consectetur cumque dolorem ea explicabo, fugiat illum ipsam modi nam nobis quidem rem rerum sint temporibus. Architecto blanditiis cum doloremque eaque inventore laborum, nostrum, omnis possimus quidem quisquam rem tenetur, veritatis vero? Corporis?</p>
+        <div class="modal" id="projectModal">
+            <div class="modal-background animate fadeIn"></div>
+            <div class="modal-card animated fadeInUp">
+                <div class="project port-text">
+                    <div class="project-head">
+                        <h1>> <a href="https://gitlab.com/thesporkening/sporkbot">SporkBot</a></h1>
+                    </div>
+                    <div class="project-body">
+                        <p>A bot for "The Sporkening" gaming community</p>
+                    </div>
+                </div>
             </div>
-            <button class="modal-close is-large" aria-label="close"></button>
+            <button class="modal-close is-large" aria-label="close" v-on:click="projectModal"></button>
         </div>
-        <div class="columns">
+        <div class="columns animated fadeInUpBig">
             <div class="column">
                 <div class="logo">< Snipey /></div>
                 <div class="sub-logo">Full Stack Developer</div>
             </div>
         </div>
-        <div class="box gradient-border">
-            <div class="columns">
-                <div class="column is-four-fifths port-text">
+        <div class="box animated fadeInUpBig">
+            <div class="columns is-centered">
+                <div class="column is-fullwidth port-text">
                     <p>
-                        My name is Stephen and I am a developer of sorts. I have made a few projects and currently am just working on hobby projects for me to learn a few new web technologies.
+                        My name is Stephen and I am a developer of sorts. I have made a few projects and currently am
+                        just working on hobby projects for me to learn a few new web technologies.
                     </p>
-<!--                    <hr/>
-                    <p>
-                        Skills:<br>
-                        > Databases
-                            <progress class="progress is-success" value="60" max="100">Backend</progress>
-                        > Javascript
-                            <progress class="progress is-warning" value="50" max="100">Javascript</progress>
-                        > PHP
-                            <progress class="progress is-success" value="65" max="100">PHP</progress>
-                        > GIT
-                            <progress class="progress is-success" value="75" max="100">GIT</progress>
-                    </p>-->
                     <br>
                     <div class="columns">
                         <div class="column">
-                            <a href="https://gitlab.com/users/Snipey/projects" class="button is-fullwidth port-text-inv modal-button" data-target="#projectsModal" onclick="projectModal()">Projects</a>
+                            <a class="button is-fullwidth port-text-inv modal-button" data-target="#projectModal"
+                               v-on:click="projectModal">Projects</a>
                         </div>
                     </div>
                 </div>
-                <div class="column social">
+                <div class="social">
                     <Socials/>
                 </div>
             </div>
@@ -52,79 +49,83 @@
     export default {
         components: {
             Socials
+        },
+        methods: {
+            projectModal() {
+                let modal = document.getElementById("projectModal");
+                let modal_classes = modal.classList;
+                if (modal_classes.contains("is-active") === false) {
+                    modal_classes.add("is-active");
+                } else {
+                    modal_classes.remove("is-active");
+                }
+            }
         }
     }
-
-    function projectModal() {
-        document.querySelectorAll('.modal-button').forEach(function(el) {
-            el.addEventListener('click', function() {
-                let target = document.querySelector(el.getAttribute('data-target'));
-
-                target.classList.add('is-active');
-
-                target.querySelector('.modal-close').addEventListener('click',   function() {
-                    target.classList.remove('is-active');
-                });
-            });
-        });
-    }
 </script>
-<style>
+<style scoped>
+    .modal-background {
+        color: rgba(0, 0, 0, 0.27);
+        height: 100%;
+    }
+    .project-head {
+        font-size: 15pt;
+        margin-bottom: 5px;
+    }
+    .project > a {
+        color: #fdfbff;
+    }
+    .project > a:hover {
+        color: #DA4096;
+    }
+    .modal-card {
+        border: 5px solid #DA4096;
+        border-radius: 15px;
+        background: #1b1b1b;
+        box-shadow: 5px 5px 2px 2px #0d070f;
+        padding: 15px;
+    }
+
+    ::selection {
+        background: transparent; /* WebKit/Blink Browsers */
+    }
+
+    ::-moz-selection {
+        background: transparent; /* Gecko Browsers */
+    }
+
     .port-text {
         color: #fdfbff;
         font-family: 'Press Start 2P', cursive;
     }
-    .social {
-        position: relative;
-    }
+
     .logo {
         font-size: 46pt;
-        font-weight: bold;
+        font-weight: bolder;
         text-align: center;
-        color: white;
-        font-family: 'Roboto Mono', monospace;
+        color: #521acf;
+        text-shadow: 0 4px 4px #282828;
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
     }
+
     .sub-logo {
+        font-size: 24pt;
         text-align: center;
-        color: white;
+        color: #511ac4;
+        text-shadow: 0 4px 4px #282828;
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
     }
+
     .container {
-        margin-top: 15vh;
+        margin-top: 25vh;
         width: 50vw;
         font-family: 'Ubuntu', sans-serif;
     }
 
-    .gradient-border {
-        --borderWidth: 6px;
-        background: #000000;
-        position: relative;
-        border-radius: var(--borderWidth);
-    }
-
-    .gradient-border:after {
-        content: '';
-        position: absolute;
-        top: calc(-1 * var(--borderWidth));
-        left: calc(-1 * var(--borderWidth));
-        height: calc(100% + var(--borderWidth) * 2);
-        width: calc(100% + var(--borderWidth) * 2);
-        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-        border-radius: calc(2 * var(--borderWidth));
-        z-index: -1;
-        animation: animatedgradient 3s ease alternate infinite;
-        background-size: 300% 300%;
-    }
-
-
-    @keyframes animatedgradient {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
+    .container > .box {
+        background: #20113A;
+        border: 5px solid #DA4096;
+        border-radius: 15px;
+        box-shadow: 0 0 8px 10px #0d070f;
     }
 </style>
