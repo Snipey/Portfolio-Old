@@ -7,8 +7,8 @@
       "config": { "distDir": "public" }
     }
   ],
-  "scope": "snipey,
-  "alias": ["snipey.me"],
+  "scope": "snipey",
+  "alias": "snipey.me",
   "routes": [
     {
       "src": "/_nuxt/.+",
