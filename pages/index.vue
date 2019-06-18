@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="modal" id="projectModal">
-            <div class="modal-background"></div>
+            <div class="modal-background animate fadeIn"></div>
             <div class="modal-card animated fadeInUp">
                 <div class="project port-text">
                     <div class="project-head">
@@ -27,7 +27,6 @@
                         My name is Stephen and I am a developer of sorts. I have made a few projects and currently am
                         just working on hobby projects for me to learn a few new web technologies.
                     </p>
-
                     <br>
                     <div class="columns">
                         <div class="column">
@@ -65,6 +64,10 @@
     }
 </script>
 <style scoped>
+    .modal-background {
+        color: rgba(0, 0, 0, 0.27);
+        height: 100%;
+    }
     .project-head {
         font-size: 15pt;
         margin-bottom: 5px;
@@ -79,7 +82,7 @@
         border: 5px solid #DA4096;
         border-radius: 15px;
         background: #1b1b1b;
-        box-shadow: 0 0 8px 10px #0d070f;
+        box-shadow: 5px 5px 2px 2px #0d070f;
         padding: 15px;
     }
 
