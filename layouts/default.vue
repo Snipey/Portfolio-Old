@@ -15,7 +15,7 @@
   width: 100%;
 }
   .bg {
-    background-image: url("~assets/bg.jpg");
+    background-color: #0d070f;
     background-position: center;
     background-size: cover;
     position: absolute;
