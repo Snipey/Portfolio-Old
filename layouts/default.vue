@@ -1,7 +1,7 @@
 <template>
   <div class="mainContainer">
     <nuxt />
-    <div class="bg animate fadeIn delay-1s">
+    <div class="bg animate fadeIn delay-1s is-fullwidth-mobile">
       <video
         loop
         muted
@@ -14,13 +14,13 @@
     </div>
   </div>
 </template>
+
 <style>
 .mainContainer {
   height: 100%;
   min-height: 100% !important;
   bottom: 0;
   display: inline-block;
-  position: absolute;
   width: 100%;
 }
 

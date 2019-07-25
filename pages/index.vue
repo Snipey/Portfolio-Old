@@ -20,14 +20,14 @@
         v-on:click="projectModal"
       ></button>
     </div>
-    <div class="columns animated fadeInUpBig">
+    <div class="columns animated fadeInUp">
       <div class="column">
         <div class="logo">< Snipey /></div>
         <div class="sub-logo">Full Stack Developer</div>
       </div>
     </div>
-    <div class="box animated fadeInUpBig">
-      <div class="columns is-centered">
+    <div class="box animated fadeInUp ">
+      <div class="columns is-centered is-fullwidth-mobile">
         <div class="column is-fullwidth port-text">
           <p>
             My name is Stephen and I am a developer of sorts. I have made a few
@@ -46,10 +46,8 @@
             </div>
           </div>
         </div>
-        <div class="social">
-          <Socials />
-        </div>
       </div>
+      <Socials />
     </div>
   </div>
 </template>
@@ -114,7 +112,7 @@ export default {
   font-size: 46pt;
   font-weight: bolder;
   text-align: center;
-  color: #521acf;
+  color: #fdfbff;
   text-shadow: 0 4px 4px #282828;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
 }
@@ -122,14 +120,13 @@ export default {
 .sub-logo {
   font-size: 24pt;
   text-align: center;
-  color: #511ac4;
+  color: #fdfbff;
   text-shadow: 0 4px 4px #282828;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
 }
 
 .container {
-  margin-top: 25vh;
-  width: 50vw;
+  margin-top: 15%;
   font-family: "Ubuntu", sans-serif;
 }
 

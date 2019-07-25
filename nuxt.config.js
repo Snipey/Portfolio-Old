@@ -64,8 +64,8 @@ export default {
   modules: [
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
     "@nuxtjs/bulma",
-    "@nuxtjs/font-awesome",
-    "@nuxtjs/svg-sprite"
+    "@nuxtjs/svg-sprite",
+    "nuxt-fontawesome"
   ],
   /*
    ** Build configuration
