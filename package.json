@@ -1,7 +1,7 @@
 {
   "name": "Portfolio",
   "version": "1.0.0",
-  "description": "A portfolio for stephenf.dev",
+  "description": "A portfolio for snipey.me",
   "author": "Snipey",
   "private": true,
   "scripts": {
@@ -10,20 +10,30 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "deploy": "now --target production"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.9.0",
     "@nuxtjs/bulma": "^1.2.1",
-    "@nuxtjs/font-awesome": "^1.0.4",
     "@nuxtjs/svg-sprite": "^0.2.1",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "nuxt-fontawesome": "^0.4.0"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^24.1.0",
+    "husky": "^2.4.1",
     "jest": "^24.1.0",
     "nodemon": "^1.18.9",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
     "vue-jest": "^3.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
