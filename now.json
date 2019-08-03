@@ -8,7 +8,7 @@
     }
   ],
   "scope": "snipey",
-  "alias": "snipey.me",
+  "alias": ["snipey.me", "snipey.dev"],
   "routes": [
     {
       "src": "/_nuxt/.+",
