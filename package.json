@@ -14,7 +14,10 @@
     "deploy": "now --target production"
   },
   "dependencies": {
-    "@fortawesome/free-brands-svg-icons": "^5.9.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.20",
+    "@fortawesome/free-brands-svg-icons": "^5.10.0",
+    "@fortawesome/free-solid-svg-icons": "^5.10.0",
+    "@fortawesome/vue-fontawesome": "^0.1.6",
     "@nuxtjs/bulma": "^1.2.1",
     "@nuxtjs/svg-sprite": "^0.2.1",
     "nuxt": "^2.0.0",

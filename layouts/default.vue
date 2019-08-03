@@ -1,5 +1,5 @@
 <template>
-  <div class="mainContainer">
+  <div class="mainContainer is-fullwidth">
     <nuxt />
     <div class="bg animate fadeIn delay-1s is-fullwidth-mobile">
       <video

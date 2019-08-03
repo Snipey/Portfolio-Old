@@ -13,28 +13,32 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: "Portfolio | Snipey.me",
+    title: "Snipey | Developer",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
+        hid: "author",
+        name: "author",
+        content: "Stephen Freerking"
+      },
+      {
         hid: "description",
         name: "description",
-        content: "A humble software developer portfolio"
+        content: "Fullstack Developer - Node, Javascript, Vue"
       },
       {
         hid: "keywords",
         name: "keywords",
         content:
-          "vuejs, nuxt, javascript, hire, development, software, projects, open source, php, full stack"
+          "vuejs, nuxt, javascript, hire, development, software, projects, open source, full stack, Snipey"
       }
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
         rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css?family=Roboto+Mono|Press+Start+2P&display=swap"
+        href: "https://fonts.googleapis.com/css?family=Bitter&display=swap"
       },
       {
         rel: "stylesheet",
@@ -65,8 +69,32 @@ export default {
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
     "@nuxtjs/bulma",
     "@nuxtjs/svg-sprite",
-    "nuxt-fontawesome"
+    [
+      "nuxt-fontawesome",
+      {
+        component: "fa",
+        imports: [
+          //import whole set
+          {
+            set: "@fortawesome/free-solid-svg-icons",
+            icons: ["fas"]
+          }
+        ]
+      }
+    ]
   ],
+  fontawesome: {
+    imports: [
+      {
+        set: "@fortawesome/pro-regular-svg-icons",
+        icons: ["faAdjust"]
+      },
+      {
+        set: "@fortawesome/free-solid-svg-icons",
+        icons: ["fas"]
+      }
+    ]
+  },
   /*
    ** Build configuration
    */
