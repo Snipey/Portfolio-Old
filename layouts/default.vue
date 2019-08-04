@@ -16,6 +16,9 @@
 </template>
 
 <style>
+html {
+  overflow-y: auto;
+}
 .mainContainer {
   height: 100%;
   min-height: 100% !important;

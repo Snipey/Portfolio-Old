@@ -1,9 +1,9 @@
 <template>
   <div class="container is-fullwidth-mobile">
     <!-- PROJECT MODAL START -->
-    <div class="modal animate fadeIn" id="projectModal">
+    <div class="modal animate zoomInDown" id="projectModal">
       <div class="modal-background" v-on:click="projectModal"></div>
-      <div class="modal-card animated fadeIn">
+      <div class="modal-card animated zoomInDown">
         <div class="project port-text">
           <button
             class="modal-close is-large"
@@ -42,9 +42,9 @@
     </div>
     <!-- PROJECT MODAL END -->
     <!-- CONTRIBUTION MODAL START -->
-    <div class="modal animate fadeIn" id="contributionModal">
+    <div class="modal animate zoomInDown" id="contributionModal">
       <div class="modal-background" v-on:click="contributionModal"></div>
-      <div class="modal-card animated fadeIn">
+      <div class="modal-card animated zoomInDown">
         <div class="project port-text">
           <button
             class="modal-close is-large"
@@ -68,16 +68,16 @@
       </div>
     </div>
     <!-- CONTRIBUTION MODAL END -->
-    <!-- LOGO START -->
-    <div class="columns animated fadeInUp">
-      <div class="column">
-        <div class="logo">< Snipey /></div>
-        <div class="sub-logo">Full Stack Developer</div>
-      </div>
-    </div>
-    <!-- LOGO END -->
     <!-- PORTFOLIO BODY START -->
-    <div class="portfolio animated fadeInUp">
+    <div class="portfolio animated rotateIn">
+      <!-- LOGO START -->
+      <div class="columns">
+        <div class="column">
+          <div class="logo">< Snipey /></div>
+          <div class="sub-logo">Full Stack Developer</div>
+        </div>
+      </div>
+      <!-- LOGO END -->
       <div class="box">
         <div class="columns">
           <div class="column port-text">
