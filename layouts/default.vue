@@ -1,24 +1,25 @@
 <template>
   <div class="mainContainer is-fullwidth">
     <nuxt />
-    <div class="bg animate fadeIn delay-1s is-fullwidth-mobile">
-      <video
-        loop
-        muted
-        autoplay
-        poster="img/videoframe.jpg"
-        class="fullscreen-bg__video"
-      >
-        <source src="bg.mp4" type="video/mp4" />
-      </video>
-    </div>
+    <div class="bg animate fadeIn delay-1s is-fullwidth-mobile"></div>
   </div>
 </template>
 
+<script>
+// (function titleScroller(text) {
+//     document.title = text;
+//     console.log(text);
+//     setTimeout(function () {
+//         titleScroller(text.substr(1) + text.substr(0, 1));
+//     }, 500);
+// }(" Snipey | Will develop the best stuff :D "));
+</script>
+
 <style>
 html {
-  overflow-y: auto;
+  overflow-y: auto !important;
 }
+
 .mainContainer {
   height: 100%;
   min-height: 100% !important;
@@ -36,38 +37,17 @@ html {
   left: 0;
   overflow: hidden;
   z-index: -100;
-}
-
-.fullscreen-bg__video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 65%;
-}
-
-@media (min-aspect-ratio: 16/9) {
-  .fullscreen-bg__video {
-    height: 300%;
-    top: -100%;
-  }
-}
-
-@media (max-aspect-ratio: 16/9) {
-  .fullscreen-bg__video {
-    width: 300%;
-    left: -100%;
-  }
+  background-image: url("~assets/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
+  transform: scale(1.1);
 }
 
 @media (max-width: 767px) {
   .bg {
     background-color: #0d070f;
-  }
-
-  .fullscreen-bg__video {
-    display: none;
   }
 }
 </style>

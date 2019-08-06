@@ -1,9 +1,9 @@
 <template>
   <div class="container is-fullwidth-mobile">
     <!-- PROJECT MODAL START -->
-    <div class="modal animate zoomInDown" id="projectModal">
+    <div class="modal" id="projectModal">
       <div class="modal-background" v-on:click="projectModal"></div>
-      <div class="modal-card animated zoomInDown">
+      <div class="modal-card animated fadeInUp">
         <div class="project port-text">
           <button
             class="modal-close is-large"
@@ -42,9 +42,9 @@
     </div>
     <!-- PROJECT MODAL END -->
     <!-- CONTRIBUTION MODAL START -->
-    <div class="modal animate zoomInDown" id="contributionModal">
+    <div class="modal" id="contributionModal">
       <div class="modal-background" v-on:click="contributionModal"></div>
-      <div class="modal-card animated zoomInDown">
+      <div class="modal-card animated fadeInUp">
         <div class="project port-text">
           <button
             class="modal-close is-large"
@@ -69,7 +69,7 @@
     </div>
     <!-- CONTRIBUTION MODAL END -->
     <!-- PORTFOLIO BODY START -->
-    <div class="portfolio animated rotateIn">
+    <div class="portfolio animated fadeInUp">
       <!-- LOGO START -->
       <div class="columns">
         <div class="column">
@@ -81,7 +81,7 @@
       <div class="box">
         <div class="columns">
           <div class="column port-text">
-            <p>
+            <p class="shadow">
               My name is Stephen and I am a developer of sorts. I have made a
               few projects and currently am just working on hobby projects for
               me to learn a few new web technologies.
@@ -90,7 +90,7 @@
             <div class="columns">
               <div class="column is-half">
                 <a
-                  class="button is-fullwidth port-text-inv modal-button"
+                  class="button is-fullwidth modal-button"
                   data-target="#projectModal"
                   v-on:click="projectModal"
                 >
@@ -99,7 +99,7 @@
               </div>
               <div class="column is-half">
                 <a
-                  class="button is-fullwidth port-text-inv modal-button"
+                  class="button is-fullwidth modal-button"
                   data-target="#projectModal"
                   v-on:click="contributionModal"
                 >
@@ -154,20 +154,24 @@ export default {
     width: 100%;
   }
 }
+
 @media only screen and (min-width: 1024px) {
   .container {
     width: 65vw;
   }
 }
+
 @media only screen and (min-width: 1360px) {
   .container {
     width: 55vw;
   }
 }
 
-.modal-button {
-  box-shadow: 2px 2px 6px rgba(54, 54, 54, 1);
+.button:hover {
+  color: #ffffff;
+  background-color: #da4096;
 }
+
 .modal-background {
   color: rgba(0, 0, 0, 0.27);
   height: 100%;
@@ -176,24 +180,28 @@ export default {
   font-size: 15pt;
   margin-bottom: 5px;
 }
+
 .project-link {
   color: #ffffff;
   text-decoration: underline;
 }
+
 .project-link:hover {
   color: #da4096;
   text-decoration: none;
 }
+
 .project > a {
   color: #fdfbff;
+  text-shadow: none !important;
 }
+
 .project > a:hover {
   color: #da4096;
 }
 .modal-card {
-  border: 5px solid #da4096;
-  border-radius: 15px;
-  background: #1b1b1b;
+  background: #20113a8c;
+  border: 5px solid #da4097b4;
   padding: 15px;
 }
 
@@ -211,15 +219,18 @@ export default {
   font-size: 25px;
   font-family: "Bitter", cursive;
 }
+.shadow {
+  text-shadow: 0 4px 4px #282828;
+}
 
 .logo {
   font-family: "Bitter", cursive;
   font-size: 46pt;
   font-weight: bolder;
   text-align: center;
+  text-shadow: 0 4px 4px #282828;
   -webkit-text-stroke: 1.3px #da4096;
-  color: transparent;
-  text-shadow: 0px 0px 1.2px rgba(255, 255, 255, 0.8);
+  color: #fdfbff;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -240,9 +251,7 @@ export default {
 }
 
 .portfolio > .box {
-  background: #20113a;
-  border: 5px solid #da4096;
-  border-radius: 15px;
-  box-shadow: inset 0px 2px 3px rgba(54, 54, 54, 0.8);
+  background: #20113a8c;
+  border: 5px solid #da4097b4;
 }
 </style>
