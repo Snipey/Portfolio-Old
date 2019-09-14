@@ -21,13 +21,18 @@
       </a>
     </span>
     <span>
+      <a class="social" href="https://www.npmjs.com/~snipey">
+        <fa class="icon" :icon="faNpm" />
+      </a>
+    </span>
+    <span>
       <a class="social" href="mailto:contact@snipey.dev">
         <fa class="icon" :icon="faEnvelope" />
       </a>
     </span>
     <span>
       <a class="social" href="https://notify.me/snipey">
-        <svg-icon class="social-svg" width="45px" height="45px" name="notify" />
+        <svg-icon class="icon social-svg" name="notify" />
       </a>
     </span>
   </div>
@@ -38,6 +43,7 @@ import {
   faDiscord,
   faTwitter,
   faGitlab,
+  faNpm,
   faGithub
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -45,6 +51,9 @@ export default {
   computed: {
     faGitlab() {
       return faGitlab;
+    },
+    faNpm() {
+      return faNpm;
     },
     faGithub() {
       return faGithub;
