@@ -1,3 +1,5 @@
+<a href="https://codebeat.co/projects/github-com-snipey-portfolio-develop"><img alt="codebeat badge" src="https://codebeat.co/badges/b8425d73-78cf-4836-a3ea-f420239b7642" /></a>
+
 # Snipey.dev portfolio
 
 My portfolio built using [NuxtJS](https://nuxtjs.org) as SSR and [BulmaCSS](http://www.dropwizard.io/1.0.2/docs/) for the UI
